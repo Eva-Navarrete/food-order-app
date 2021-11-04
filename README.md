@@ -48,10 +48,10 @@ JavaScript | CSS | HTML5 | React | fetchAPI
 
 ### Preview
 
-![Home](/Users/evanavarrete/Turing/mod-3/udemy-projects/food-order-app/src/assets/food-home.png)
-![Cart](/Users/evanavarrete/Turing/mod-3/udemy-projects/food-order-app/src/assets/cart.png)
-![Form](/Users/evanavarrete/Turing/mod-3/udemy-projects/food-order-app/src/assets/form.png)
-![Completed](/Users/evanavarrete/Turing/mod-3/udemy-projects/food-order-app/src/assets/complete.png)
+![Home](src/assets/food-home.png)
+![Cart](src/assets/cart.png)
+![Form](src/assets/form.png)
+![Completed](src/assets/complete.png)
 ![foav](https://media.giphy.com/media/3qWRD8kL4mRo4ucuk9/giphy.gif)
 
 [Return to top](#food-order-app)
