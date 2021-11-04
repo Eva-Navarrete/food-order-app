@@ -9,6 +9,8 @@ import classes from "./Cart.module.css";
 
 const Cart = (props) => {
   const [isCheckout, setIsCheckout] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [didSubmit, setDidSubmit] = useState(false);
 
   const cartCtx = useContext(CartContext);
 
@@ -27,8 +29,10 @@ const Cart = (props) => {
     setIsCheckout(true);
   };
 
-  const submitOrderHandler = (userData) => {
-    fetch(
+  const submitOrderHandler = async (userData) => {
+    setIsSubmitting(true);
+
+    await fetch(
       "https://food-app-http-e473b-default-rtdb.firebaseio.com/orders.json",
       {
         method: "POST",
@@ -38,6 +42,8 @@ const Cart = (props) => {
         }),
       }
     );
+    setIsSubmitting(false);
+    setDidSubmit(true);
   };
 
   const cartItems = (
