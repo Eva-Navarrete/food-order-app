@@ -6,8 +6,25 @@ import classes from "./AvailableMeals.module.css";
 
 const AvailableMeals = () => {
   useEffect(() => {
-    const fetchMeals = async () => {};
-    fetch("https://food-app-http-e473b-default-rtdb.firebaseio.com.meals.json");
+    const fetchMeals = async () => {
+      const response = await fetch(
+        "https://food-app-http-e473b-default-rtdb.firebaseio.com.meals.json"
+      );
+      const responseData = await response.json();
+
+      const loadedMeals = [];
+
+      for (const key in responseData) {
+        loadedMeals.push({
+          id: key,
+          name: responseData[key].name,
+          desccription: responseData[key].desccription,
+          price: responseData[key].price,
+        });
+      }
+    };
+
+    fetchMeals();
   }, []);
 
   const mealsList = DUMMY_MEALS.map((meal) => (
